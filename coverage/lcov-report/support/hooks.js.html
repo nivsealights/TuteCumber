@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for support\hooks.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">support/</a> hooks.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.82% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">21.43% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>3/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.9% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">module.exports = function () {
+    //Before any feature - this is a good place for executionStart
+    this.BeforeFeatures(function (features, next) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (!global.$$SeaLights$$) <span class="cstat-no" title="statement not covered" >return next();</span>
+        //console.log('SL: ' + global.$$SeaLights$$);
+        executionID = new Date().valueOf().toString();
+        //console.log('ExecutionID started: ' + executionID);
+        global.$$SeaLights$$.pushEvent({
+            type: 'executionIdStarted',
+            executionId: executionID,
+            framework: 'cucumber'
+        });
+        next();
+    });
+&nbsp;
+    //After all features - this is a good place for executionEnd and shutdown (empty queues)
+    //Timeout here is 60 seconds to allow for retries and slow network
+    this.AfterFeatures(<span class="fstat-no" title="function not covered" >function (features, next) {</span>
+<span class="cstat-no" title="statement not covered" >        if (!global.$$SeaLights$$) <span class="cstat-no" title="statement not covered" >return next();</span></span>
+        //console.log('ExecutionID ended: ' + executionID);
+<span class="cstat-no" title="statement not covered" >        global.$$SeaLights$$.pushEvent({type: 'executionIdEnded', executionId: executionID, meta: {}});</span>
+<span class="cstat-no" title="statement not covered" >        executionID = null;</span>
+<span class="cstat-no" title="statement not covered" >        global.$$SeaLights$$.shutDown(<span class="fstat-no" title="function not covered" >function () {</span></span>
+            //console.log('shutdown');
+<span class="cstat-no" title="statement not covered" >            next(); </span>//Wait for shutdown to complete before calling next(), which may terminate the process.
+        });
+    });
+&nbsp;
+    this.BeforeScenario(function (scenario, next) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (!global.$$SeaLights$$) <span class="cstat-no" title="statement not covered" >return next();</span>
+        var scenarioDesc = scenario.getKeyword() + ' ' + scenario.getName();
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var fullPath = [scenario.getFeature().getName(), scenario.getName(), scenarioDesc];</span>
+<span class="cstat-no" title="statement not covered" >        global.$$SeaLights$$.setCurrentTestIdentifier(executionID + '/' + fullPath.join(' '));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var testName = fullPath.join(' ');</span>
+<span class="cstat-no" title="statement not covered" >        global.$$SeaLights$$.pushEvent({</span>
+            type: 'testStart',
+            testName: testName,
+            executionId: executionID,
+            testSuitePath: fullPath,
+            meta: {}
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        next();</span>
+    });
+&nbsp;
+&nbsp;
+    //Test end. This occurs after StepResult, so there is nothing much to do, maybe clear current test identifier
+    this.AfterScenario(<span class="fstat-no" title="function not covered" >function (scenario, next) {</span>
+<span class="cstat-no" title="statement not covered" >        if (!global.$$SeaLights$$) <span class="cstat-no" title="statement not covered" >return next();</span></span>
+<span class="cstat-no" title="statement not covered" >        global.$$SeaLights$$.setCurrentTestIdentifier();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        next();</span>
+    });
+&nbsp;
+	Object.keys(this).forEach(function(i){
+		console.log('key: '+i);
+	});
+	
+    //Test result (Step result)
+    this.ScenarioResult &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.ScenarioResult(<span class="fstat-no" title="function not covered" >function (scenarioResult, next) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var scenario = scenarioResult.getScenario();</span>
+<span class="cstat-no" title="statement not covered" >        if (!global.$$SeaLights$$) <span class="cstat-no" title="statement not covered" >return next();</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var scenarioDesc = scenario.getKeyword() + ' ' + scenario.getName();</span>
+<span class="cstat-no" title="statement not covered" >        var fullPath = [scenario.getFeature().getName(), scenario.getName(), scenarioDesc];</span>
+<span class="cstat-no" title="statement not covered" >        var duration = scenarioResult.getDuration();</span>
+<span class="cstat-no" title="statement not covered" >        var status = scenarioResult.getStatus();</span>
+<span class="cstat-no" title="statement not covered" >        var milliseconds = Math.ceil(scenarioResult.getDuration() / 1e6);</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (status == 'pending')</span>
+<span class="cstat-no" title="statement not covered" >            status = 'skipped';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var testName = fullPath.join(' ');</span>
+<span class="cstat-no" title="statement not covered" >        global.$$SeaLights$$.pushEvent({</span>
+            type: 'testEnd',
+            testName: testName,
+            executionId: executionID,
+            result: status,
+            duration: milliseconds,
+            meta: {}
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        next();</span>
+    });
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Nov 29 2016 17:21:19 GMT+0200 (Jerusalem Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

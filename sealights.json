@@ -1,0 +1,10 @@
+{
+	"server": "https://dev-niv-gw.sealights.co/api",
+	"interval": 10000,
+	"customerId": "SeaLights",
+	"appName": "tutucumber",
+	"build": "1",
+	"branch": "origin/master",
+	"environmentName": "Unit Test",
+	"enabled": true
+}
